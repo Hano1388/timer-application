@@ -33,6 +33,31 @@
   var resetButton = document.querySelector('#reset');
   var theTimer = document.querySelector("#fake_timer");
 
+  var interval;
+  var timer = [0,0,0,0];
+  var timerRunning = false;
+
+  function runTimer() {
+
+      let currentTime = timer[0] + ":" + timer[1] + ":" + timer[2];
+      theTimer.innerHTML = currentTime;
+      document.querySelector("#timer_count_time").value = theTimer.innerHTML;
+      timer[3]++;
+
+      timer[0] = Math.floor((timer[3]/100)/60);
+      timer[1] = Math.floor((timer[3]/100) - (timer[0] * 60));
+      timer[2] = Math.floor(timer[3] - (timer[1] * 100) - (timer[0] * 6000));
+  }
+
+  function startTimer(event) {
+
+    // event.preventDefault();
+    if (!timerRunning) {
+      timerRunning = true;
+      interval = setInterval(runTimer, 10);
+    }
+  }
+
 
 
   startButton.addEventListener('click', startTimer, false);
