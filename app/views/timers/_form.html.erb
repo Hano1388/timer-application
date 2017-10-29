@@ -65,6 +65,13 @@
     }
   }
 
+  // stop timer
+  function stopTimer() {
+
+    // event.preventDefault();
+    clearInterval(interval);
+  }
+
 
 
   startButton.addEventListener('click', startTimer, false);
