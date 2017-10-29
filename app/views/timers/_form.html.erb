@@ -72,6 +72,16 @@
     clearInterval(interval);
   }
 
+  // Reset everything:
+  function reset() {
+      clearInterval(interval);
+      interval = null;
+      timer = [0,0,0,0];
+      timerRunning = false;
+
+      theTimer.innerHTML = "00:00:00";
+  }
+
 
 
   startButton.addEventListener('click', startTimer, false);
