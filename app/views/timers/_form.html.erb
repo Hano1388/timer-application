@@ -26,3 +26,21 @@
 <button id="start">Start</button>
 <button id="stop">Stop</button>
 <button id="reset">Reset</button>
+
+<script>
+  var startButton = document.querySelector('#start');
+  var stopButton = document.querySelector('#stop');
+  var resetButton = document.querySelector('#reset');
+  var theTimer = document.querySelector("#fake_timer");
+
+
+
+  startButton.addEventListener('click', startTimer, false);
+  // start.addEventListener('click', () => { startTimer(event) }, false);
+  stopButton.addEventListener('click', stopTimer, false);
+  // stop.addEventListener('click', () => { stopTimer(event) }, false);
+  resetButton.addEventListener("click", reset, false);
+  // resetButton.addEventListener('click', () => { resetTimer(event) }, false);
+
+
+</script>
