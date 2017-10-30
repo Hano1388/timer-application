@@ -33,7 +33,7 @@
               <% end %>
               <div class="actions">
                 <!-- <#%= form.submit 'Save' %> -->
-                <input type="submit" class="btn btn-success-outline btn-block mainButtons" name="commit" value="Save" data-disable-with="Save">
+                <input type="submit" class="btn btn-success-outline btn-block mainButtons" name="commit" value="SAVE" data-disable-with="Save">
               </div>
 
               <div class="field">
@@ -45,15 +45,15 @@
           </div>
 
           <div class="col-lg-3">
-            <button id="start" class="btn btn-success-outline btn-block mainButtons">Start</button>
+            <button id="start" class="btn btn-success-outline btn-block mainButtons">START</button>
           </div>
 
           <div class="col-lg-3">
-            <button id="stop" class="btn btn-success-outline btn-block mainButtons">Stop</button>
+            <button id="stop" class="btn btn-success-outline btn-block mainButtons">STOP</button>
           </div>
 
           <div class="col-lg-3">
-            <button id="reset" class="btn btn-success-outline btn-block mainButtons">Reset</button>
+            <button id="reset" class="btn btn-success-outline btn-block mainButtons">RESET</button>
           </div>
         </div>
       </div>
@@ -94,7 +94,8 @@
                   %s
                 </div>
                 <div class="cell">
-                  <%= link_to 'Delete', timer, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <!-- <#%= link_to 'Delete', timer, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+                  <button class="timer-delete-button btn btn-sm" data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/timers/<%= timer.id %>" ><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button>
                 </div>
               </div>
               <% end %>
