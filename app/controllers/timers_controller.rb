@@ -14,6 +14,7 @@ class TimersController < ApplicationController
 
   # GET /timers/new
   def new
+    @timers = Timer.all
     @timer = Timer.new
   end
 
